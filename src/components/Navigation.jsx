@@ -11,14 +11,16 @@ export default function Navigation({
   score,
   setScore,
   correctAnswer,
-  
 }) {
   function handleNext() {
-    if(selectedOption) { setIndex(index + 1);
-      if(selectedOption == correctAnswer){
+    if (selectedOption) {
+      setIndex(index + 1)
+      if (selectedOption == correctAnswer) {
         setScore(score + 1)
       }
-     }else{ setError("Please select an option")}
+    } else {
+      setError("Please select an option")
+    }
   }
   function handlePrev() {
     selectedOption ? setIndex(index - 1) : setError("Please select an option")
