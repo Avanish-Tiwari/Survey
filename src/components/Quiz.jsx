@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { data } from "../assets/data";
 import Navigation from "./Navigation";
+import { ScoreContext } from "../ContextAPI/ScoreContext";
 
 export default function Quiz() {
   const [index, setIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const {score, setScore} = useContext(ScoreContext);
   const [showScore, setShowScore] = useState(false);
   const [showNext, setShowNext] = useState(false);
   const [showPrev, setShowPrev] = useState(false);

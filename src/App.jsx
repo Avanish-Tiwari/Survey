@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./App.css"
 import Navbar from "./components/Navbar"
 import Quiz from "./components/Quiz"
+import { Outlet } from "react-router-dom"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className="flex flex-col justify-between h-screen">
       <Navbar />
-      <Quiz />
+      <Outlet/>
     </div>
   )
 }
